@@ -1,30 +1,28 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="container">
+    <Navbar></Navbar>
+    <router-view style="padding-top:70px;"></router-view>
+    <Footer></Footer>
+    <EasterEgg></EasterEgg>
   </div>
-  <router-view/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Navbar from '../src/components/Navbar'
+import Footer from '../src/components/Footer'
+import EasterEgg from '../src/components/EasterEgg'
 
-#nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default {
+  name: 'App',
+  components: {
+    Navbar,
+    Footer,
+    EasterEgg,
   }
 }
+</script>
+
+<style lang="scss">
+@import "@/assets/scss/index.scss";
 </style>

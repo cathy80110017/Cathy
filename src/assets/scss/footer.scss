@@ -1,0 +1,17 @@
+@import "@/assets/scss/index.scss";
+
+#footer {
+    height: 20vh;
+    background-color: $secondColor;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+        width: 7vh;
+        fill: white;
+        padding: 2vh;
+        cursor: pointer;
+    }
+}

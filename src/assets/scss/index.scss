@@ -1,0 +1,38 @@
+$mainColor: #642A02;
+$secondColor: #F3553C;
+$thirdColor: #EEB3A3;
+$forthColor: #FFB53C;
+
+* {
+    box-sizing: border-box;
+}
+
+@mixin full {
+    @media screen and (min-width:1000px){
+        @content;
+    }    
+}
+
+@mixin pad {
+    @media  only screen and  (min-width: 601px) and (max-width: 1000px){
+        @content;
+    }    
+}
+@mixin phone {
+    @media screen and (max-width: 600px){
+        @content;
+    }    
+}
+
+body{
+    margin: 0;
+    height: 100%;
+  }
+  
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}

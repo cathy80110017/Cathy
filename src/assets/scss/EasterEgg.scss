@@ -1,0 +1,67 @@
+#easterEgg {
+  position: absolute;
+  z-index: 999;
+  top: 0%;
+}
+
+.hidden {
+  display: none;
+}
+
+.run-track {
+    z-index: -2;
+    position: fixed;
+    overflow: hidden;
+    width: 100vw;
+    height: 180px;
+  }
+  
+  .nyan-animate {
+    position: absolute;
+    z-index: 0;
+    animation-delay: 0s;
+    animation-duration: 8s;
+    animation-name: img-animation;
+  }
+  
+  .nyan-bg {
+    position: absolute;
+    z-index: -1;
+    width: 260px;
+    height: 170px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: rgb(228, 48, 48);
+    animation: bg-animation 450ms infinite;
+    animation-delay: 0s;
+  }
+  
+  @keyframes img-animation {
+    from {
+      transform: translateX(-23vw);
+    }
+    to {
+      transform: translateX(100vw);
+    }
+  }
+  
+  @keyframes bg-animation {
+    0% {
+      background-color: rgb(228, 48, 48);
+    }
+    25% {
+      background-color: orange;
+    }
+    45% {
+      background-color: yellow;
+    }
+    67% {
+      background-color: rgb(32, 170, 32);
+    }
+    83% {
+      background-color: rgb(49, 49, 218);
+    }
+    100% {
+      background-color: rgb(158, 11, 158);
+    }
+  }
