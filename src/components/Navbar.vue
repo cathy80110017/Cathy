@@ -44,8 +44,8 @@ export default {
           path: "/About",
         },
         {
-          name: "Page2",
-          path: "/Page2",
+          name: "Form",
+          path: "/Form",
         },
         {
           name: "Page3",

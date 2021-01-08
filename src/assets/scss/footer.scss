@@ -2,16 +2,16 @@
 
 #footer {
     height: 20vh;
-    background-color: $secondColor;
+    background-color: $mainColor;
     
     display: flex;
     align-items: center;
     justify-content: center;
 
     .icon {
-        width: 7vh;
+        width: 8vh;
         fill: white;
-        padding: 2vh;
+        margin: 2vh;
         cursor: pointer;
     }
 }

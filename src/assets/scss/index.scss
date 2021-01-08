@@ -1,28 +1,44 @@
-$mainColor: #642A02;
+$mainColor: rgb(123, 86, 62);
 $secondColor: #F3553C;
 $thirdColor: #EEB3A3;
 $forthColor: #FFB53C;
+$backgroundColor: rgb(242, 238, 235);
+
+$pc-media:960px;
+$pcs-media:959px;
+$pad-media:760px;
+$pads-media:759px;
+$phone-media:480px;
+$phones-media:479px;
 
 * {
     box-sizing: border-box;
 }
 
-@mixin full {
-    @media screen and (min-width:1000px){
-        @content;
-    }    
-}
-
-@mixin pad {
-    @media  only screen and  (min-width: 601px) and (max-width: 1000px){
-        @content;
-    }    
-}
-@mixin phone {
-    @media screen and (max-width: 600px){
-        @content;
-    }    
-}
+//電腦
+@mixin pc-width() {
+    @media all and (min-width: $pc-media) {
+                 @content;
+           }
+      }
+  //平板
+   @mixin pad-width() {
+  @media all and (min-width:$pad-media) and (max-width: $pcs-media) {
+                  @content;
+            }
+  }
+  //小平板
+   @mixin small-pad-width() {
+          @media all and (min-width: $phone-media) and (max-width:$pads-media) {
+                  @content;
+            }
+   }
+  //手機
+   @mixin phone-width() {
+          @media all and (max-width: $phones-media) {
+                  @content;
+            }
+   }
 
 body{
     margin: 0;
@@ -35,4 +51,10 @@ body{
     display: flex;
     align-content: center;
     justify-content: center;
+}
+
+.router-view {
+    padding-top:70px;
+    min-height: 100vh;
+    background-color: $backgroundColor;
 }

@@ -1,7 +1,7 @@
 <template>
   <div id="container">
     <Navbar></Navbar>
-    <router-view style="padding-top:70px;"></router-view>
+    <router-view class="router-view"></router-view>
     <Footer></Footer>
     <EasterEgg></EasterEgg>
   </div>

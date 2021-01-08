@@ -1,0 +1,86 @@
+@import "@/assets/scss/index.scss";
+
+.home {
+    hr{
+        width: 95%;
+        border: 1px dashed black;
+    }
+}
+
+#self-intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    padding: 7vw;
+    margin: 0px;
+
+    width: 100%;
+    height: auto;
+
+    .head-sticker {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+
+        img{
+            border-radius: 50%;
+            border: 3px solid $secondColor;
+            margin: 0px;
+            width: 100%;
+        } 
+       
+        @include pc-width {
+            width: 20%;
+        }
+    
+        @include pad-width {
+            width: 40%;
+        }
+    
+        @include small-pad-width{
+            width: 100%;
+            img{
+                width:50%;
+            }
+        }
+    
+        @include phone-width{
+            width: 100%;
+            img{
+                width:50%;
+            }
+        }
+    }
+
+    .info-text {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+
+        padding: 5vw;
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        @include pc-width {
+            width: 80%;
+        }
+    
+        @include pad-width {
+            width: 60%;
+        }
+    
+        @include small-pad-width{
+            width: 100%;
+        }
+    
+        @include phone-width{
+            width: 100%;
+        }
+    }
+}
