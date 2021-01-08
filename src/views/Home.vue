@@ -1,20 +1,27 @@
 <template>
   <div class="home">
     <header style="position:relative;">
-      <img :src="require('@/assets/img/work.png')" style="width:100%;">
+      <img :src="require('@/assets/img/work.png')" style="width:100%;" />
     </header>
     <section id="self-intro">
       <div class="head-sticker">
-        <img :src="require('@/assets/img/me.jpg')" class="">
+        <img :src="require('@/assets/img/me.jpg')" class="" />
       </div>
       <div class="info-text">
-        <p>{{selfInfoText}}</p>
+        <p>{{ selfInfoText }}</p>
       </div>
     </section>
-    <hr>
+    <hr/>
     <section id="work-display">
-
+      <div class="box" v-for="(workDisplay,index) in workDisplays" :key="index">
+        <a :href="workDisplay.path">
+          <img :src="workDisplay.img" />
+          <div>{{workDisplay.text}}</div>          
+        </a>
+      </div>
     </section>
+    <hr/>
+
   </div>
 </template>
 
@@ -24,9 +31,32 @@
 export default {
   name: "Home",
   components: {},
-  data:()=>({
-    selfInfoText:"Hi, I am Cathy, I study at National Taipei University of Technology.",
-  })
+  data: () => ({
+    selfInfoText:
+      "Hi, I am Cathy, I study at National Taipei University of Technology.",
+    workDisplays: [
+      {
+        img: require("@/assets/img/Amy01.jpg"),
+        text: "123",
+        path: "",
+      },
+      {
+        img: require("@/assets/img/Amy02.jpg"),
+        text: "456",
+        path: "",
+      },
+      {
+        img: require("@/assets/img/Amy03.jpg"),
+        text: "789",
+        path: "",
+      },
+      {
+        img: require("@/assets/img/Amy02.jpg"),
+        text: "1010",
+        path: "",
+      },
+    ],
+  }),
 };
 </script>
 

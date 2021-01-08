@@ -84,3 +84,57 @@
         }
     }
 }
+
+#work-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    padding: 5vw;
+    margin: 0px;
+
+    width: 100%;
+    height: auto;
+
+    .box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+
+        padding: 3vw;
+        margin: 0px;
+
+        width: 100%;
+        height: auto;
+
+        img{
+            width: 100%;
+        }
+
+        a{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            text-decoration: none;
+        }
+
+        @include pc-width {
+            width: 25%;
+        }
+    
+        @include pad-width {
+            width: 33%;
+        }
+    
+        @include small-pad-width{
+            width: 50%;
+        }
+    
+        @include phone-width{
+            width: 100%;
+        }
+    }
+}
