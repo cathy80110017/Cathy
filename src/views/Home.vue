@@ -15,8 +15,8 @@
     <section id="work-display">
       <div class="box" v-for="(workDisplay,index) in workDisplays" :key="index">
         <a :href="workDisplay.path">
-          <img :src="workDisplay.img" />
-          <div>{{workDisplay.text}}</div>          
+          <div>{{workDisplay.title}}</div>
+          <div>{{workDisplay.subtitle}}</div>          
         </a>
       </div>
     </section>
@@ -36,24 +36,9 @@ export default {
       "Hi, I am Cathy, I study at National Taipei University of Technology.",
     workDisplays: [
       {
-        img: require("@/assets/img/Amy01.jpg"),
-        text: "123",
-        path: "",
-      },
-      {
-        img: require("@/assets/img/Amy02.jpg"),
-        text: "456",
-        path: "",
-      },
-      {
-        img: require("@/assets/img/Amy03.jpg"),
-        text: "789",
-        path: "",
-      },
-      {
-        img: require("@/assets/img/Amy02.jpg"),
-        text: "1010",
-        path: "",
+        title: "",
+        subtitle: "",
+        img: "",
       },
     ],
   }),

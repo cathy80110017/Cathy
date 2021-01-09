@@ -7,7 +7,7 @@ import Page3 from '../views/Page3.vue'
 const routes = [
   {
     path: '/',
-    redirect: 'Home',
+    redirect: '/Home',
   },
   {
     path: '/Home',

@@ -1,0 +1,30 @@
+@import "@/assets/scss/index.scss";
+
+.form{
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+
+        padding: 7vw;
+        margin: 0px;
+
+        width: 100%;
+        height: auto;
+
+        .title {
+            width: 80%;
+        }
+
+        .subtitle {
+            width: 80%;
+        }
+
+        .text {
+            min-height: 20vh;
+            width: 80%;
+        }         
+    }
+}
+
