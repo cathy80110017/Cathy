@@ -47,10 +47,6 @@ export default {
           name: "Form",
           path: "/Form",
         },
-        {
-          name: "Page3",
-          path: "/Page3",
-        },
       ],
     };
   },

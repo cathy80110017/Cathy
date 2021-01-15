@@ -1,7 +1,7 @@
 @import "@/assets/scss/index.scss";
 
 .home {
-    hr{
+    hr {
         width: 95%;
         border: 1px dashed black;
     }
@@ -25,32 +25,34 @@
         justify-content: center;
         align-content: center;
 
-        img{
+        img {
             border-radius: 50%;
             border: 3px solid $secondColor;
             margin: 0px;
             width: 100%;
-        } 
-       
+        }
+
         @include pc-width {
             width: 20%;
         }
-    
+
         @include pad-width {
             width: 40%;
         }
-    
-        @include small-pad-width{
+
+        @include small-pad-width {
             width: 100%;
-            img{
-                width:50%;
+
+            img {
+                width: 50%;
             }
         }
-    
-        @include phone-width{
+
+        @include phone-width {
             width: 100%;
-            img{
-                width:50%;
+
+            img {
+                width: 50%;
             }
         }
     }
@@ -70,16 +72,16 @@
         @include pc-width {
             width: 80%;
         }
-    
+
         @include pad-width {
             width: 60%;
         }
-    
-        @include small-pad-width{
+
+        @include small-pad-width {
             width: 100%;
         }
-    
-        @include phone-width{
+
+        @include phone-width {
             width: 100%;
         }
     }
@@ -97,23 +99,46 @@
     width: 100%;
     height: auto;
 
-    .box{
+    .box {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-content: center;
 
-        padding: 3vw;
-        margin: 0px;
+        padding: 2vw;
+        margin: 2vw;
 
         width: 100%;
         height: auto;
 
-        img{
+        border: 2px solid brown;
+
+        background-color: antiquewhite;
+
+        .title {
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .text {
+            width: 100%;
+            text-align: center;
+        }
+
+        img {
             width: 100%;
         }
 
-        a{
+        a {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -124,17 +149,74 @@
         @include pc-width {
             width: 25%;
         }
-    
+
         @include pad-width {
             width: 33%;
         }
-    
-        @include small-pad-width{
+
+        @include small-pad-width {
             width: 50%;
         }
-    
-        @include phone-width{
+
+        @include phone-width {
             width: 100%;
         }
+    }
+}
+
+
+// Carousel
+
+#carousel {
+    .slides {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        width: 100%;
+        height: auto;
+    }
+
+    .slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 20em;
+        height: 20em;
+        margin: 1em;
+    }
+
+    .slide:first-of-type {
+        opacity: 0;
+    }
+
+    .slide:last-of-type {
+        opacity: 0;
+    }
+
+    %button-layout {
+        position: absolute;
+        z-index: 999;
+        width: 10%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .left {
+        @extend %button-layout;
+        left: 5%;
+    }
+
+    .right {
+        @extend %button-layout;
+        right: 5%;
     }
 }
