@@ -109,29 +109,37 @@
         margin: 2vw;
 
         width: 100%;
-        height: auto;
+        min-height: 25vh;
 
         border: 2px solid brown;
 
         background-color: antiquewhite;
 
-        .title {
-            width: 100%;
+        %text-layout {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             text-align: center;
+            width: 100%;
+        }
+
+        .title {
+            @extend %text-layout;
             font-size: 2rem;
-            font-weight: bold;
+            font-weight: bold;            
+            height: auto;
         }
 
         .subtitle {
-            width: 100%;
+            @extend %text-layout;
             text-align: center;
             font-size: 1.5rem;
             font-weight: bold;
         }
 
         .text {
-            width: 100%;
-            text-align: center;
+            @extend %text-layout;
+            max-height: 60%;
         }
 
         img {
